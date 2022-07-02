@@ -43,6 +43,7 @@
                       <td>
                         <a type="button" href="{{route('data_update',$y->id)}}" class="btn btn-info"><i class="fas fa-trash-alt">Update</i></a>
                         <a type="button" href="{{route('data_delete',$y->id)}}" class="btn btn-danger"><i class="fas fa-trash-alt">Delete</i></a>
+                        <a type="button" href="{{route('data_view',$y->id)}}" class="btn btn-danger"><i class="fas fa-trash-alt">View</i></a>
                        </td>
                
                     </tr>

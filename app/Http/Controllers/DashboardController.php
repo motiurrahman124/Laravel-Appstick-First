@@ -64,4 +64,11 @@ class DashBoardController extends Controller
             return view('backend.blog.view',['v'=>$var]);
         }
     }
+    public function data_view($id){
+        $var=LatestBlog::where(['id'=>$id])->first();
+        if($var)
+        {
+            return view('backend.blog.oneview',['u'=>$var]);
+        }
+    }
 }
