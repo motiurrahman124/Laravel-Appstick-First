@@ -20,6 +20,7 @@
                     <th>Sl</th>
                     <th>Name</th>
                     <th>Title</th>
+                    <th>Image</th>
                     <th>Description</th>
                     <th>Action</th>
                    
@@ -34,11 +35,14 @@
                       <td>{{$loop->iteration}}</td>
                       <td>{{$y->author}}</td>
                       <td>{{$y->title}}</td>
+                      <td><img src="{{ asset($y->image) }}" width="30px"  heigh="20px" alt="no image" /></td>
                       <td>{{$y->description}}</td>
                       
                 
                      
-                      <td><a type="button" href="" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+                      <td>
+                        <a type="button" href="{{route('data_update',$y->id)}}" class="btn btn-info"><i class="fas fa-trash-alt">Update</i></a>
+                        <a type="button" href="{{route('data_delete',$y->id)}}" class="btn btn-danger"><i class="fas fa-trash-alt">Delete</i></a>
                        </td>
                
                     </tr>

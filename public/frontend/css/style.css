@@ -6703,8 +6703,8 @@ featured-v3
 }
 
 .sidebar-area .recent-post-widget .singe-post .post-thumbnail img {
-  width: 100%;
-  height: 100%;
+  width: 25px;
+  height: 30px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -6779,8 +6779,8 @@ featured-v3
 }
 
 .single-post .post-thumbnail img {
-  width: 100%;
-  height: 100%;
+  width: 250px;
+  height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-transition: all 0.5s linear;

@@ -20,10 +20,13 @@ php artisan serve
 
 Route::get('/blog','HomeController@blogpage')->name('x');
 Route::get('/viewData','DashBoardController@viewData')->name('viewData');
+Route::get('/viewOne','DashBoardController@viewOne')->name('viewOne');
 Route::get('/order','HomeController@orderpage')->name('order');
 Route::get('/dashboard','DashBoardController@Dashboard')->name('dashboard');
 Route::get('/create','DashBoardController@create')->name('createForm');
 Route::post('/dataCreate','DashBoardController@dataCreate');
+Route::get('/data_delete/{id}','DashBoardController@data_delete')->name('data_delete');
+Route::get('/data_update/{id}','DashBoardController@data_update')->name('data_update');
 
 
 

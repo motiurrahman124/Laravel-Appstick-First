@@ -8,168 +8,37 @@
                 <div class="section-wrap">
                     <h2 class="section-title mb-5">Our Latest Blog</h2>
                     <div class="row m-b-30">
+
+            @foreach($blog as $blog)
                         <div class="col-lg-6 col-md-6">
                             <article  class="single-post">
                                 <div class="post-thumbnail">
                                     <a href="single-blog.html">
-                                        <img src="{{asset('frontend/images/blog/1.jpg')}}" alt="blog" />
+                                        <img src="{{asset($blog->image)}}"  alt="blog" />
                                     </a>
-                                    <span class="blog-date">15 Sep, 20</span>
+                                    <span class="blog-date">{{date('d M,Y')}}</span>
                                 </div>
                                 <div class="post-info">
                                     <ul class="post-meta">
                                         <li class="author">
-                                            <a href="#"><i class="far fa-user"></i>John Doe</a>
+                                            <a href="#"><i class="far fa-user"></i>{{$blog->name}}</a>
                                         </li>
                                         <li class="comments">
                                             <a href="#"><i class="far fa-comments"></i>32 Comments</a>
                                         </li>
                                     </ul>
                                     <h2 class="post-title">
-                                        <a href="single-blog.html">Nunc quis phasellus mi sed. </a>
+                                        <a href="single-blog.html">{{$blog->title}} </a>
                                     </h2>
-                                    <p class="post-content">Leo at bibendum duis libero sed. Sapien lobortis vel id velit </p>
+                                    <p class="post-content">{{$blog->description}}</p>
                                     <a href="single-blog.html" class="post-btn">
                                         Read More <i class="fas fa-arrow-right"></i>
                                     </a>
                                 </div>
                             </article>
                         </div>
-                        <div class="col-lg-6 col-md-6">
-                            <article  class="single-post">
-                                <div class="post-thumbnail">
-                                    <a href="single-blog.html">
-                                        <img src="{{asset('frontend/images/blog/2.jpg')}}" alt="blog" />
-                                    </a>
-                                    <span class="blog-date">15 Sep, 20</span>
-                                </div>
-                                <div class="post-info">
-                                    <ul class="post-meta">
-                                        <li class="author">
-                                            <a href="#"><i class="far fa-user"></i>John Doe</a>
-                                        </li>
-                                        <li class="comments">
-                                            <a href="#"><i class="far fa-comments"></i>32 Comments</a>
-                                        </li>
-                                    </ul>
-                                    <h2 class="post-title">
-                                        <a href="single-blog.html">Nunc quis phasellus mi sed. </a>
-                                    </h2>
-                                    <p class="post-content">Leo at bibendum duis libero sed. Sapien lobortis vel id velit </p>
-                                    <a href="single-blog.html" class="post-btn">
-                                        Read More <i class="fas fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <article  class="single-post">
-                                <div class="post-thumbnail">
-                                    <a href="single-blog.html">
-                                        <img src="{{asset('frontend/images/blog/3.jpg')}}" alt="blog" />
-                                    </a>
-                                    <span class="blog-date">15 Sep, 20</span>
-                                </div>
-                                <div class="post-info">
-                                    <ul class="post-meta">
-                                        <li class="author">
-                                            <a href="#"><i class="far fa-user"></i>John Doe</a>
-                                        </li>
-                                        <li class="comments">
-                                            <a href="#"><i class="far fa-comments"></i>32 Comments</a>
-                                        </li>
-                                    </ul>
-                                    <h2 class="post-title">
-                                        <a href="single-blog.html">Nunc quis phasellus mi sed. </a>
-                                    </h2>
-                                    <p class="post-content">Leo at bibendum duis libero sed. Sapien lobortis vel id velit </p>
-                                    <a href="single-blog.html" class="post-btn">
-                                        Read More <i class="fas fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <article  class="single-post">
-                                <div class="post-thumbnail">
-                                    <a href="single-blog.html">
-                                        <img src="{{asset('frontend/images/blog/4.jpg')}}" alt="blog" />
-                                    </a>
-                                    <span class="blog-date">15 Sep, 20</span>
-                                </div>
-                                <div class="post-info">
-                                    <ul class="post-meta">
-                                        <li class="author">
-                                            <a href="#"><i class="far fa-user"></i>John Doe</a>
-                                        </li>
-                                        <li class="comments">
-                                            <a href="#"><i class="far fa-comments"></i>32 Comments</a>
-                                        </li>
-                                    </ul>
-                                    <h2 class="post-title">
-                                        <a href="single-blog.html">Nunc quis phasellus mi sed. </a>
-                                    </h2>
-                                    <p class="post-content">Leo at bibendum duis libero sed. Sapien lobortis vel id velit </p>
-                                    <a href="single-blog.html" class="post-btn">
-                                        Read More <i class="fas fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <article  class="single-post">
-                                <div class="post-thumbnail">
-                                    <a href="single-blog.html">
-                                        <img src="{{asset('frontend/images/blog/5.jpg')}}" alt="blog" />
-                                    </a>
-                                    <span class="blog-date">15 Sep, 20</span>
-                                </div>
-                                <div class="post-info">
-                                    <ul class="post-meta">
-                                        <li class="author">
-                                            <a href="#"><i class="far fa-user"></i>John Doe</a>
-                                        </li>
-                                        <li class="comments">
-                                            <a href="#"><i class="far fa-comments"></i>32 Comments</a>
-                                        </li>
-                                    </ul>
-                                    <h2 class="post-title">
-                                        <a href="single-blog.html">Nunc quis phasellus mi sed. </a>
-                                    </h2>
-                                    <p class="post-content">Leo at bibendum duis libero sed. Sapien lobortis vel id velit </p>
-                                    <a href="single-blog.html" class="post-btn">
-                                        Read More <i class="fas fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <article  class="single-post">
-                                <div class="post-thumbnail">
-                                    <a href="single-blog.html">
-                                        <img src="{{asset('frontend/images/blog/6.jpg')}}" alt="blog" />
-                                    </a>
-                                    <span class="blog-date">15 Sep, 20</span>
-                                </div>
-                                <div class="post-info">
-                                    <ul class="post-meta">
-                                        <li class="author">
-                                            <a href="#"><i class="far fa-user"></i>John Doe</a>
-                                        </li>
-                                        <li class="comments">
-                                            <a href="#"><i class="far fa-comments"></i>32 Comments</a>
-                                        </li>
-                                    </ul>
-                                    <h2 class="post-title">
-                                        <a href="single-blog.html">Nunc quis phasellus mi sed. </a>
-                                    </h2>
-                                    <p class="post-content">Leo at bibendum duis libero sed. Sapien lobortis vel id velit </p>
-                                    <a href="single-blog.html" class="post-btn">
-                                        Read More <i class="fas fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </article>
-                        </div>
+                        
+            @endforeach
                     </div>
                 </div>
                 <div class="pagination-area mt-50">
