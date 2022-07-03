@@ -74,14 +74,17 @@ class DashBoardController extends Controller
 
     public function dataUpdate(Request $request){
         //dd($request->x);
+        if($request->image){
 
         $image=$request->image;
+
         $name=$image->getClientOriginalName();
         $imagename=time()."_".$name;
         $destination=public_path('images');
         $image->move($destination,$imagename);
-        
         $data['image']='images/'.$imagename;
+        }
+        
         $data['author']=$request->x;
         $data['title']=$request->title;
         $data['description']=$request->description;
