@@ -8,7 +8,8 @@
     <title>Document</title>
 </head>
 <body>
-<form>
+<form role="form" Action="{{url('dataUpdate')}}" method="post" id="quickForm" enctype="multipart/form-data">
+  @csrf
     <br>
   <div class="form-row">
     <div class="col-md-4">
@@ -16,7 +17,7 @@
     </div>
     <div class="form-group col-md-4">
       <label for="inputEmail4">Author Name</label>
-      <input type="text" class="form-control" id="inputEmail4" placeholder="Email" value="{{$v->author}}">
+      <input type="text" class="form-control" name="x" id="inputEmail4" placeholder="Email" value="{{$v->author}}">
     </div>
   </div>
   <div class="form-row">
@@ -25,7 +26,7 @@
     </div>
     <div class="form-group col-md-4">
       <label for="inputEmail4">Title</label>
-      <input type="text" class="form-control" id="inputEmail4" placeholder="Email" value="{{$v->title}}">
+      <input type="text" class="form-control" name="title" id="inputEmail4" placeholder="Email" value="{{$v->title}}">
     </div>
   </div>
   <div class="form-row">
@@ -34,7 +35,7 @@
     </div>
     <div class="form-group col-md-4">
       <label for="inputEmail4">Description</label>
-      <input type="text" class="form-control" id="inputEmail4" placeholder="Email" value="{{$v->description}}">
+      <input type="text" class="form-control" name="description"  id="inputEmail4" placeholder="Email" value="{{$v->description}}">
     </div>
   </div>
   <div class="form-row">
@@ -43,10 +44,13 @@
     </div>
     <div class="form-group col-md-4">
       <label for="inputEmail4">Image</label>
-      <input type="file" name="image" class="form-control" id="exampleInputPassword1" ><br>
+      <input type="file" name="image" class="form-control" name="image" id="exampleInputPassword1" ><br>
       <img src="{{ asset($v->image) }}" width="200px"  height="200px" alt="no image" />
     </div>
   </div>
+
+  <input type="hidden" class="form-control" name="id"  id="inputEmail4" placeholder="Email" value="{{$v->id}}">
+
   <div class="form-row">
     <div class="col-md-4">
 

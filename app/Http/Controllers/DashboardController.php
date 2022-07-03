@@ -71,4 +71,25 @@ class DashBoardController extends Controller
             return view('backend.blog.oneview',['u'=>$var]);
         }
     }
+
+    public function dataUpdate(Request $request){
+        //dd($request->x);
+
+        $image=$request->image;
+        $name=$image->getClientOriginalName();
+        $imagename=time()."_".$name;
+        $destination=public_path('images');
+        $image->move($destination,$imagename);
+        
+        $data['image']='images/'.$imagename;
+        $data['author']=$request->x;
+        $data['title']=$request->title;
+        $data['description']=$request->description;
+
+        $blog=LatestBlog::where('id',$request->id)->first();
+        $blog->update($data);
+
+      return redirect()->route('viewData');
+       
+    }
 }
